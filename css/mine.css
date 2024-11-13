@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200vh;
+}
+
+/* Gallery container styling */
+.gallery {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    width: 90%;
+    max-width: 1800px;
+    
+    margin: 20px auto;
+}
+
+/* Image styling */
+.gallery img {
+    width: 100%;
+    
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+/* Image hover effect */
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+
+.container {
+    position: relative;
+}
+
+.color1 a{
+     color: white;
+}
+
+.pos1{
+   position: relative;
+   
+   word-spacing: 20px;
+   color: white;
+}
