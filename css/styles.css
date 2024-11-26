@@ -2947,13 +2947,23 @@ td:last-child {
  * responsive:
  * project-wide and shared styles
  * ------------------------------------------------------------------- */
+
+ @media  screen and (min-width: 1400px) and (max-width: 1900px) {
+    .section-header .text-display-title {
+        font-size: var(--text-xxxl);
+        
+        font-size: 54px;
+        top: -109px;
+        left: 36px;
+    }
+ }
 @media screen and (max-width: 1400px) {
     .section-header .text-display-title {
         font-size: var(--text-xxxl);
         
         font-size: 54px;
-        top: -149px;
-        left: 249px;
+        top: -212px;
+        left: 262px;
     }
 
     .section-header::before {
