@@ -5,7 +5,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Port-Folio</title>
       <!-- SWIPER CSS LINK -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css" integrity="sha256-DBYdrj7BxKM3slMeqBVWX2otx7x4eqoHRJCsSDJ0Nxw=" crossorigin="anonymous"/>
@@ -61,7 +61,7 @@
         ================================================== -->
                <!-- # site header 
         ================================================== -->
-        <header class="s-header">
+        <header class="s-header ">
             <div class="row s-header__inner" style="transition: none;">
 
                 <div class="s-header__block">
@@ -94,27 +94,27 @@
                    
 
                     
-            
+    
 
-                    <div class="image-selector" style="position:  relative; top: 253px; left: 9px;">
+                <div class="image-selector photobutton " >
+    
+                                          
+                        <a href="#" data-sort="All" class="image-sort-button hover active">All</a>
+                        
+                       <a href="#" data-sort="Social_media_post"  class="image-sort-button hover" >Social Media Post</a>
+                        <a href="#" data-sort='product' class="image-sort-button hover">Product</a>
+                        <a  href="#" data-sort="pack" class="image-sort-button hover">Packaging And Cards</a>
+                     <!-- s-header__menu-links -->    
+                </div>
+        
 
-                                              
-                            <a href="#" data-sort="All" class="image-sort-button hover active">All</a>
-                            
-                           <a href="#" data-sort="Social_media_post"  class="image-sort-button hover" >Social Media Post</a>
-                            <a href="#" data-sort='product' class="image-sort-button hover">Product</a>
-                            <a  href="#" data-sort="pack" class="image-sort-button hover">Packaging And Cards</a>
-                         <!-- s-header__menu-links -->    
-                    </div>
-               
             
            
-        </header> <!-- end s-header -->
-
+      
         
         <!-- # works
         ================================================== -->
-        <section id="works" class="s-works target-section">
+        <section id="works container" class="s-works target-section">
 
             <div class="row">
                 <div class="column xl-12">
@@ -126,7 +126,7 @@
 
            
         </section> <!-- end s-works --> 
-        <section id="gallery1" class="s-intro target-section" style="height: 100%;">
+        <section id="gallery1 container" class="s-intro target-section" style="height: 100%;">
        
 
             <!-- GRID CONTAINER -->
@@ -284,6 +284,9 @@
     <script src="js/masonry.min.js"></script>
     <script src="js/jquery.lettering.js"></script>
     <script src="js/index.js"></script>
+
+
+   
 
 </body>
 </html>

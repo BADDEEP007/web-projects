@@ -422,7 +422,7 @@ time,
 mark,
 audio,
 video {
-    margin        : 0;
+    margin        : 3px;
     padding       : 0;
     border        : 0;
     font-size     : 100%;
@@ -2735,7 +2735,7 @@ td:last-child {
     content       : attr(data-num);
     font-family   : var(--font-1);
     font-weight   : 600;
-    font-size     : 10em;
+    font-size     : 9em;
     letter-spacing: -0.05em;
     line-height   : 1;
     color         : var(--color-gray-11);
@@ -2744,6 +2744,11 @@ td:last-child {
     top           : -0.25em;
     left          : -0.1em;
     opacity       : 0.5;
+    top: -220px;
+    left: 2px;
+    color: black;
+    
+
 }
 
 .section-header.light-on-dark .text-display-title {
@@ -2903,10 +2908,19 @@ td:last-child {
 @media screen and (max-width: 1400px) {
     .section-header .text-display-title {
         font-size: var(--text-xxxl);
+        
+        font-size: 54px;
+        top: -149px;
+        left: 249px;
     }
 
     .section-header::before {
         font-size: 8.6em;
+        
+        top: -192px;
+        left: 58px;
+        scale: .8;
+    }
     }
 }
 
@@ -2917,6 +2931,23 @@ td:last-child {
 
     .testimonials__cite {
         text-align: left;
+    }
+    .section-header .text-display-title {
+        font-size: var(--text-xxl);
+        top: -127px;
+        left: 180px;
+    }
+    
+    .section-header::before {
+        font-size: 4em;
+        left     : 0;
+        top: -127px;
+        left: 65px;
+        scale: 1.5;
+
+        color: black;
+
+
     }
 }
 
@@ -2932,11 +2963,20 @@ td:last-child {
 
     .section-header .text-display-title {
         font-size: var(--text-xxl);
+        top: -127px;
+        left: 210px;
     }
 
     .section-header::before {
-        font-size: 7em;
+        font-size: 4em;
         left     : 0;
+        top: -127px;
+        left: 65px;
+        scale: 1.5;
+
+        color: black;
+
+
     }
 }
 
