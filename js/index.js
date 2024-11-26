@@ -291,7 +291,8 @@ $(function(){
   var images = [...document.querySelectorAll('.gallery-img')] //GET ALL IMAGES WITH CLASS 'GALLERY-IMG'
 
   //SORT IMAGES
-  sortingbuttons.forEach(button=>button.addEventListener('click',function(){ 
+  sortingbuttons.forEach(button=>button.addEventListener('click',function(event){
+    event.preventDefault(); 
 
   var sortvalue =  button.dataset.sort; //GET VALUE OF THE 'DATA-SORT' FROM BUTTON WHICH HAS BEEN CLICKED
 
@@ -322,7 +323,9 @@ $(function(){
 
   //CHANGE BUTTON STYLE
 
-
+  if (window.masonryInstance) {
+    window.masonryInstance.layout(); // Recalculate layout without reinitializing
+  }
 
 
 

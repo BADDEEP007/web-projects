@@ -40,7 +40,31 @@
 
 
 <body id="top">
-
+    <script>
+        document.querySelectorAll('.image-sort-button').forEach(button => {
+          button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const category = this.getAttribute('data-sort');
+            
+            // Hide all images
+            const images = document.querySelectorAll('.gallery-image');
+            images.forEach(image => image.style.display = 'none');
+            
+            // Show images matching the selected category
+            if (category === "All") {
+              images.forEach(image => image.style.display = 'block');
+            } else {
+              const filteredImages = document.querySelectorAll(`.image[alt="${category}"]`);
+              filteredImages.forEach(image => image.style.display = 'block');
+            }
+      
+            // Toggle active class
+            document.querySelectorAll('.image-sort-button').forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+          });
+        });
+      </script>
+      
     
     <!-- preloader
     ================================================== -->
@@ -100,11 +124,11 @@
                 <div class="image-selector photobutton " >
     
                                           
-                        <a href="#" data-sort="All" class="image-sort-button hover active">All</a>
+                        <a href="#" class="image-sort-button hover active"  data-sort="All" >All</a>
                         
-                       <a href="#" data-sort="Social_media_post"  class="image-sort-button hover " >Social Media Post</a>
-                        <a href="#" data-sort='product' class="image-sort-button hover">Product</a>
-                        <a  href="#" data-sort="pack" class="image-sort-button hover">Packaging And Cards</a>
+                       <a href="#"  class="image-sort-button hover "  data-sort="Social_media_post" >Social Media Post</a>
+                        <a href="#"  class="image-sort-button hover" data-sort='product'>Product</a>
+                        <a  href="#" class="image-sort-button hover" data-sort="pack">Packaging And Cards</a>
                      <!-- s-header__menu-links -->    
                 </div>
         
@@ -141,121 +165,124 @@
                     <!-- COLUMN -->
 
                     <div class="gallery" style="height: 100%;">
-                        <a href="images/new images/social media post/Screenshot 2024-10-27 195857.png" target="_blank" title="image" >
-                            <img class="gallery-img" src="images/new images/social media post/Screenshot 2024-10-27 195857.png" class="gallery-img" alt="Social_media_post">
+                        <a href="images/new images/social media post/Screenshot 2024-10-27 195857.png" />
+                            <img class="gallery-img" src="images/new images/social media post/Screenshot 2024-10-27 195857.png"  alt="Social_media_post">
                         </a>
-                        <a href="images/new images/social media post/Screenshot 2024-10-27 195906.png" target="_blank">
+                        <a href="images/new images/social media post/Screenshot 2024-10-27 195906.png" />
                             <img class="gallery-img" src="images/new images/social media post/Screenshot 2024-10-27 195906.png" alt="Social_media_post">
                         </a>
-                        <a href="images/new images/social media post/Screenshot 2024-10-27 195915.png" target="_blank">
+                        <a href="images/new images/social media post/Screenshot 2024-10-27 195915.png" />
                             <img class="gallery-img" src="images/new images/social media post/Screenshot 2024-10-27 195915.png" alt="Social_media_post">
                         </a>
-                        <a href="images/new images/social media post/Screenshot 2024-10-27 195926.png" target="_blank">
+                        <a href="images/new images/social media post/Screenshot 2024-10-27 195926.png" />
                             <img class="gallery-img" src="images/new images/social media post/Screenshot 2024-10-27 195926.png" alt="Social_media_post">
                         </a>
-                        <a href="\images/new images/social media post/Screenshot 2024-10-27 195937.png" target="_blank">
+                        <a href="\images/new images/social media post/Screenshot 2024-10-27 195937.png" />
                             <img class="gallery-img" src="images/new images/social media post/Screenshot 2024-10-27 195937.png" alt="Social_media_post">
                         </a>
-                        <a href="images/new images/social media post/Screenshot 2024-10-27 195951.png" target="_blank">
+                        <a href="images/new images/social media post/Screenshot 2024-10-27 195951.png" />
                             <img class="gallery-img" src="images/new images/social media post/Screenshot 2024-10-27 195951.png" alt="Social_media_post">
                         </a>
-                        <a href="images/new images/social media post/Screenshot 2024-10-27 200002.png" target="_blank">
+                        <a href="images/new images/social media post/Screenshot 2024-10-27 200002.png" />
                             <img class="gallery-img" src="images/new images/social media post/Screenshot 2024-10-27 200002.png" alt="Social_media_post">
                         </a>
-                        <a href="images/new images/social media post/Screenshot 2024-10-27 200012.png" target="_blank">
+                        <a href="images/new images/social media post/Screenshot 2024-10-27 200012.png" />
                             <img class="gallery-img" src="images/new images/social media post/Screenshot 2024-10-27 200012.png" alt="Social_media_post">
                         </a>
-                        <a href="images/new images/social media post/Screenshot 2024-10-27 200022.png" target="_blank">
+                        <a href="images/new images/social media post/Screenshot 2024-10-27 200022.png" />
                             <img class="gallery-img" src="images/new images/social media post/Screenshot 2024-10-27 200022.png" alt="Social_media_post">
                         </a>
-                        <a href="images/new images/social media post/Screenshot 2024-10-27 200030.png" target="_blank">
+                        <a href="images/new images/social media post/Screenshot 2024-10-27 200030.png" />
                             <img class="gallery-img" src="images/new images/social media post/Screenshot 2024-10-27 200030.png" alt="Social_media_post">
                         </a>
-                        <a href="images/new images/social media post/Screenshot 2024-10-27 200038.png" target="_blank">
+                        <a href="images/new images/social media post/Screenshot 2024-10-27 200038.png" />
                             <img class="gallery-img" src="images/new images/social media post/Screenshot 2024-10-27 200038.png" alt="Social_media_post">
-                        <a href="images/new images/social media post/Screenshot 2024-10-27 200051.png" target="_blank">
-                            <img class="gallery-img" class="gallery-img"  src="images/new images/social media post/Screenshot 2024-10-27 200051.png" alt="Social_media_post">
+
+                        <a href="images/new images/social media post/Screenshot 2024-10-27 200051.png" />
+                            <img class="gallery-img"   src="images/new images/social media post/Screenshot 2024-10-27 200051.png" alt="Social_media_post">
                         </a>
-                        <a href="images/new images/social media post/Screenshot 2024-10-27 200058.png" target="_blank">
+                        <a href="images/new images/social media post/Screenshot 2024-10-27 200058.png" />
                             <img class="gallery-img" src="images/new images/social media post/Screenshot 2024-10-27 200058.png" alt="Social_media_post">
                         </a>
-                        <a href="images/new images/social media post/Screenshot 2024-10-27 200109.png" target="_blank">
+                        <a href="images/new images/social media post/Screenshot 2024-10-27 200109.png" />
                             <img class="gallery-img" src="images/new images/social media post/Screenshot 2024-10-27 200109.png" alt="Social_media_post">
                         </a>
-                        <a href="images/new images/social media post/Screenshot 2024-10-27 200118.png" target="_blank">
+                        <a href="images/new images/social media post/Screenshot 2024-10-27 200118.png" />
                             <img class="gallery-img" src="images/new images/social media post/Screenshot 2024-10-27 200118.png" alt="Social_media_post">
                         </a>
                         <!-- Add more images as needed -->
 
-                        <a href='images/new images/product/Screenshot 2024-10-27 200311.png' target="_blank" title="image" >
+                        <a href='images/new images/product/Screenshot 2024-10-27 200311.png' />
                             <img class="gallery-img" src='images/new images/product/Screenshot 2024-10-27 200311.png' alt="product">
                         </a>
-                        <a href='images/new images/product/Screenshot 2024-10-27 200317.png' target="_blank" title="image" >
+                        <a href='images/new images/product/Screenshot 2024-10-27 200317.png' />
                             <img class="gallery-img" src='images/new images/product/Screenshot 2024-10-27 200317.png' alt="product">
                         </a>
-                        <a href='images/new images/product/Screenshot 2024-10-27 200325.png' target="_blank" title="image" >
+                        <a href='images/new images/product/Screenshot 2024-10-27 200325.png' />
                             <img class="gallery-img" src='images/new images/product/Screenshot 2024-10-27 200325.png' alt="product">
                         </a>
-                        <a href='images/new images/product/Screenshot 2024-10-27 200333.png' target="_blank" title="image" >
+                        <a href='images/new images/product/Screenshot 2024-10-27 200333.png' />
                             <img class="gallery-img" src='images/new images/product/Screenshot 2024-10-27 200333.png' alt="product">
                         </a>
-                        <a href='images/new images/product/Screenshot 2024-10-27 200341.png' target="_blank" title="image" >
+                        <a href='images/new images/product/Screenshot 2024-10-27 200341.png' />
                             <img class="gallery-img" src='images/new images/product/Screenshot 2024-10-27 200341.png' alt="product">
                         </a>
-                        <a href='images/new images/product/Screenshot 2024-10-27 200351.png' target="_blank" title="image" >
+                        <a href='images/new images/product/Screenshot 2024-10-27 200351.png' />
                             <img class="gallery-img" src='images/new images/product/Screenshot 2024-10-27 200351.png' alt="product">
                         </a>
-                        <a href='images/new images/product/Screenshot 2024-10-27 200358.png' target="_blank" title="image" >
+                        <a href='images/new images/product/Screenshot 2024-10-27 200358.png' />
                             <img class="gallery-img" src='images/new images/product/Screenshot 2024-10-27 200358.png' alt="product">
                         </a>
-                        <a href='images/new images/product/Screenshot 2024-10-27 200410.png' target="_blank" title="image" >
+                        <a href='images/new images/product/Screenshot 2024-10-27 200410.png' />
                             <img class="gallery-img" src='images/new images/product/Screenshot 2024-10-27 200410.png' alt="product">
                         </a>
-                        <a href='images/new images/product/Screenshot 2024-10-27 200418.png' target="_blank" title="image" >
+                        <a href='images/new images/product/Screenshot 2024-10-27 200418.png' />
                             <img class="gallery-img" src='images/new images/product/Screenshot 2024-10-27 200418.png' alt="product">
                         </a>
-                        <a href='images/new images/product/Screenshot 2024-10-27 200427.png' target="_blank" title="image" >
+                        <a href='images/new images/product/Screenshot 2024-10-27 200427.png' />
                             <img class="gallery-img" src='images/new images/product/Screenshot 2024-10-27 200427.png' alt="product">
                         </a>
-                        <a href='images/new images/product/Screenshot 2024-10-27 200442.png' target="_blank" title="image" >
+                        <a href='images/new images/product/Screenshot 2024-10-27 200442.png' />
                             <img class="gallery-img" src='images/new images/product/Screenshot 2024-10-27 200442.png' alt="product">
                         </a>
-                        <a href='images/new images/product/Screenshot 2024-10-27 200455.png' target="_blank" title="image" >
+                        <a href='images/new images/product/Screenshot 2024-10-27 200455.png' />
                             <img class="gallery-img" src='images/new images/product/Screenshot 2024-10-27 200455.png' alt="product">
                         </a>
-                        <a href='images/new images/product/Screenshot 2024-10-27 200502.png' target="_blank" title="image" >
-                            <img class="gallery-img" class="gallery-img" src='images/new images/product/Screenshot 2024-10-27 200502.png' alt="product">
+                        <a href='images/new images/product/Screenshot 2024-10-27 200502.png' />
+                            <img class="gallery-img" src='images/new images/product/Screenshot 2024-10-27 200502.png' alt="product">
                         </a>
-                        <a href='images/new images/product/Screenshot 2024-10-27 200514.png' target="_blank" title="image" >
+                        <a href='images/new images/product/Screenshot 2024-10-27 200514.png' />
                             <img class="gallery-img" src='images/new images/product/Screenshot 2024-10-27 200514.png' alt="product">
                         </a>
                       
-                        <a href='images/new images/product/Screenshot 2024-10-27 200524.png' target="_blank" title="image" >
+                        <a href='images/new images/product/Screenshot 2024-10-27 200524.png' />
                             <img class="gallery-img" src='images/new images/product/Screenshot 2024-10-27 200524.png' alt="product">
                         </a>
 
                         <!-- he -->
-                        <a href='images/new images/packaging and cards/Screenshot 2024-10-27 200744.png' target="_blank" title="image" >
+                        <a href='images/new images/packaging and cards/Screenshot 2024-10-27 200744.png' />
                             <img class="gallery-img" src='images/new images/packaging and cards/Screenshot 2024-10-27 200744.png' alt="pack">
                         </a>
-                        <a href='images/new images/packaging and cards/Screenshot 2024-10-27 200801.png' target="_blank" title="image" >
+                        <a href='images/new images/packaging and cards/Screenshot 2024-10-27 200801.png' />
                             <img class="gallery-img" src='images/new images/packaging and cards/Screenshot 2024-10-27 200801.png' alt="pack">
                         </a>
-                        <a href='images/new images/packaging and cards/Screenshot 2024-10-27 200811.png' target="_blank" title="image" >
+                        <a href='images/new images/packaging and cards/Screenshot 2024-10-27 200811.png' />
                             <img class="gallery-img" src='images/new images/packaging and cards/Screenshot 2024-10-27 200811.png' alt="pack">
                         </a>
-                        <a href='images/new images/packaging and cards/Screenshot 2024-10-27 200831.png' target="_blank" title="image" >
+                        <a href='images/new images/packaging and cards/Screenshot 2024-10-27 200831.png' />
                             <img class="gallery-img" src='images/new images/packaging and cards/Screenshot 2024-10-27 200831.png' alt="pack">
                         </a>
-                        <a href='images/new images/packaging and cards/Screenshot 2024-10-27 200909.png' target="_blank" title="image" >
+                        <a href='images/new images/packaging and cards/Screenshot 2024-10-27 200909.png' />
                             <img class="gallery-img" src='images/new images/packaging and cards/Screenshot 2024-10-27 200909.png' alt="pack">
                         </a>
-                        <a href='images/new images/packaging and cards/Screenshot 2024-10-27 200919.png' target="_blank" title="image" >
+                        <a href='images/new images/packaging and cards/Screenshot 2024-10-27 200919.png' />
                             <img class="gallery-img" src='images/new images/packaging and cards/Screenshot 2024-10-27 200919.png' alt="pack">
-                        <a href='images/new images/packaging and cards/Screenshot 2024-10-27 200925.png' target="_blank" title="image" >
+
+                        <a href='images/new images/packaging and cards/Screenshot 2024-10-27 200925.png' />
+
                             <img class="gallery-img"  src='images/new images/packaging and cards/Screenshot 2024-10-27 200925.png' alt="pack">
                         </a>
-                        <a href='images/new images/packaging and cards/Screenshot 2024-10-27 200943.png' target="_blank" title="image" >
+                        <a href='images/new images/packaging and cards/Screenshot 2024-10-27 200943.png' />
                             <img class="gallery-img" src='images/new images/packaging and cards/Screenshot 2024-10-27 200943.png' alt="pack">
                         </a>
                         
