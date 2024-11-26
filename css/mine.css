@@ -81,6 +81,10 @@ body {
 
 }
 
+.image-sort-button{
+    
+}
+
 @media (max-width:475px){
     .container1{
 
@@ -88,24 +92,24 @@ body {
     }
 }
 
-@media (max-width:640px){
+@media (min-width:640px){
     .gallery{
         grid-template-columns: repeat(2, 1fr);
     }
 }
-@media (max-width:768px){
+@media (min-width:768px){
     .gallery{
         grid-template-columns: repeat(2, 1fr);
     }
 }
-@media (max-width:1024px){
+@media (min-width:1024px){
     .gallery{
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
-@media (max-width:1536px){
+@media (min-width:1536px){
     .gallery{
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
