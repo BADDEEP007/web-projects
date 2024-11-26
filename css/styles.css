@@ -510,6 +510,7 @@ table {
  */
 .column {
     flex   : 1;
+  
     padding: 0 var(--gutter);
 }
 
@@ -3015,7 +3016,7 @@ td:last-child {
 
     .section-header .text-display-title {
         font-size: var(--text-xxl);
-        top: -127px;
+        top: -182px;
         left: 210px;
     }
 
@@ -3031,7 +3032,34 @@ td:last-child {
 
     }
 }
+@media screen and (max-width: 300px) {
+    .text-pretitle {
+        font-size  : var(--text-size);
+        line-height: var(--vspace-0_75);
+    }
 
+    .section-header {
+        margin-bottom: var(--vspace-2_5);
+    }
+
+    .section-header .text-display-title {
+        font-size: var(--text-xxl);
+        top: -127px;
+        left: 110px;
+    }
+
+    .section-header::before {
+        font-size: 4em;
+        left     : 0;
+        top: -127px;
+        left: 65px;
+        scale: 1.5;
+
+        color: black;
+
+
+    }
+}
 
 /* ===================================================================
  * # GRID-BASED LAYOUTS
