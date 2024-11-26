@@ -2711,6 +2711,12 @@ td:last-child {
     font-size     : var(--text-display-1);
     line-height   : 1.0717;
     letter-spacing: -0.015em;
+        margin-bottom : var(--vspace-1_5);
+}
+.text-display-title1 {
+    font-size     : var(--text-display-1);
+    line-height   : 1.0717;
+    letter-spacing: -0.015em;
     margin-top    : 0;
     margin-bottom : var(--vspace-1_5);
 }
@@ -2719,6 +2725,12 @@ td:last-child {
  * ## section header
  * ------------------------------------------------------------------- */
 .section-header {
+    display      : flex;
+    align-items  : flex-start;
+    margin-bottom: var(--vspace-3_5);
+    position     : relative;
+}
+.section-header1 {
     display      : flex;
     align-items  : flex-start;
     margin-bottom: var(--vspace-3_5);
@@ -2748,6 +2760,28 @@ td:last-child {
     left: 2px;
     color: black;
     
+    
+
+
+}
+
+.section-header1::before {
+    content       : attr(data-num);
+    font-family   : var(--font-1);
+    font-weight   : 600;
+    font-size     : 9em;
+    letter-spacing: -0.05em;
+    line-height   : 1;
+    color         : var(--color-gray-11);
+    margin-right  : var(--vspace-0_5);
+    position      : absolute;
+    top           : -0.25em;
+    left          : -0.1em;
+    opacity       : 0.5;
+    top: -119px;
+    left: 2px;
+    color: black;
+    
 
 }
 
@@ -2756,7 +2790,15 @@ td:last-child {
 }
 
 .section-header.light-on-dark::before {
-    color: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255);
+}
+
+.section-header1.light-on-dark .text-display-title {
+    color: white;
+}
+
+.section-header1.light-on-dark::before {
+    color: rgba(255, 255, 255);
 }
 
 /* ------------------------------------------------------------------- 
